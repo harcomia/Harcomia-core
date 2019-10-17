@@ -1,1 +1,1 @@
-# Harcomia-core
+HCA Core repository

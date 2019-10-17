@@ -1,0 +1,26 @@
+[Unit]
+Description=HCA's distributed currency daemon
+After=network.target
+
+[Service]
+User=hca
+Group=hca
+
+Type=forking
+PIDFile=/var/lib/hcad/hcad.pid
+
+ExecStart=/usr/bin/hcad -daemon -pid=/var/lib/hcad/hcad.pid \
+          -conf=/etc/hca/hca.conf -datadir=/var/lib/hcad
+
+ExecStop=-/usr/bin/hca-cli -conf=/etc/hca/hca.conf \
+         -datadir=/var/lib/hcad stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=HCA
+Comment=HCA P2P Cryptocurrency
+Comment[fr]=HCA, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=HCA, eşten eşe kriptografik sanal para birimi
+Exec=hca-qt %u
+Terminal=false
+Type=Application
+Icon=hca128
+MimeType=x-scheme-handler/hca;
+Categories=Office;Finance;

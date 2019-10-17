@@ -1,0 +1,26 @@
+# /etc/conf.d/hcad: config file for /etc/init.d/hcad
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/hca/hca.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/hcad"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/hcad.pid"
+
+# Where to write hcad data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/hcad"
+
+# User and group to own hcad process
+#BITCOIND_USER="hca"
+#BITCOIND_GROUP="hca"
+
+# Path to hcad executable
+#BITCOIND_BIN="/usr/bin/hcad"
+
+# Nice value to run hcad under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""
